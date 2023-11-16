@@ -3,14 +3,14 @@ import Image from "next/image";
 
 interface ThereProps {
   weeklyWeather: {
-    current: any;
-    previous: any;
-    next: any;
+    current?: any;
+    previous?: any;
+    next?: any;
   };
 }
 
 const There: React.FC<ThereProps> = ({ weeklyWeather }) => {
-  const [currentData, setCurrentData] = useState(weeklyWeather.current);
+  const [currentData, setCurrentData] = useState(weeklyWeather?.current || {});
   const [currentName, setCurrentName] = useState("current");
 
   const imageUrl = (imageName: string) => {
@@ -29,9 +29,10 @@ const There: React.FC<ThereProps> = ({ weeklyWeather }) => {
         return null;
     }
   };
-
   const handleNavigation = (direction: string) => {
-    if (currentName === direction) return null;
+    if (!weeklyWeather || !weeklyWeather[direction]) return;
+
+    if (currentName === direction) return;
 
     if (currentName === "current") {
       setCurrentData(weeklyWeather[direction]);
