@@ -7,6 +7,7 @@
 
 - This weather website is developed with next using the latest version of React.js. The project is written in TypeScript, and Tailwind CSS is used for the user interface design. Weather data is fetched from a data source in JSON format.
 - I published the projects in Vercel, I am sharing the links, you can view them from there.
+- https://smart-maple-ts.vercel.app/
 
 ## Getting Started
 
