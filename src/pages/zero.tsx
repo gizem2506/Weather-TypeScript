@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Image from "next/image";
 
 interface ZeroProps {
   date: string;
@@ -45,24 +46,29 @@ const Zero: React.FC<ZeroProps> = ({ date, city, type, degree }) => {
 
   return (
     <div className="flex items-center w-full overflow-hidden">
-      <div className="flex  flex-col items-center ">
+      <div className="flex  flex-col items-center mt-10">
         <div className="flex items-center gap-4  ">
-          <img
+          <Image
             src="/assets/svg/Location.svg"
-            className="w-5 h-7"
             alt="Location Icon"
+            width={20}
+            height={30}
           />
-          <p className="text-white font-inter text-2xl font-medium">{city}</p>
+          <p className="text-white font-inter text-2xl font-medium mb-2">
+            {city}
+          </p>
         </div>
 
         <p className="text-white font-inter text-4xl font-medium">{type}</p>
         <p className="  text-white font-inter mt-16 text-7xl font-medium">{`${degree}°C`}</p>
       </div>
       <div className="flex flex-col md:flex-row items-center  ">
-        <img
+        <Image
           src="/assets/svg/cloudy.svg"
-          className="w-120 h-120 md:ml-20  mb-12"
           alt="Weather Icon"
+          width={120}
+          height={120}
+          className="md:ml-20  mb-12"
         />
         <p className="text-white font-inter text-xl md:text-3xl font-medium ml-10">
           {date}

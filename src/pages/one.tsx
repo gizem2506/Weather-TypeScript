@@ -1,13 +1,16 @@
 import React from "react";
+import Image from "next/image";
 
 const One: React.FC = () => {
   return (
     <div className="bg-opacity-40 bg-[#C4C3C166] rounded-3xl p-6 relative ">
       <div className="flex md:flex-col items-center space-y-3 text-center">
-        <img
-          className="h-32 w-32 object-center"
+        <Image
+          src="/assets/svg/header-logo.svg"
           alt="Logo"
-          src="assets/svg/header-logo.svg"
+          width={100}
+          height={72}
+          className=" object-center"
         />
         <div className="flex flex-col items-center">
           <img
@@ -18,12 +21,13 @@ const One: React.FC = () => {
           <p className="text-gray-300 text-xs font-semibold ml-2">weather</p>
         </div>
         <div className="flex  flex-col items-center">
-          <img
-            className="h-10 w-10"
-            alt="explore"
-            src="assets/svg/Explore.svg"
-            style={{ color: "#C4C3C1" }}
+          <Image
+            src="/assets/svg/weather.svg"
+            alt="weather"
+            width={60}
+            height={60}
           />
+
           <p className="text-gray-300 text-xs ml-2">explore</p>
         </div>
         <div className="flex  flex-col items-center">

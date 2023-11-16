@@ -6,6 +6,7 @@ import One from "./one";
 import Two from "./two";
 import There from "./there";
 import Four from "./four";
+import Image from "next/image";
 
 interface AppProps {}
 
@@ -29,7 +30,12 @@ const App: React.FC<AppProps> = () => {
         </div>
         <div className="flex flex-col justify-center items-center order-1 md:order-2">
           <div className="flex-1 mt-6 ">
-            <img src="assets/img/background.png " alt="Logo" />
+            <Image
+              src="/assets/img/background.png"
+              alt="Logo"
+              width={252}
+              height={60}
+            />
           </div>
           <div className="flex-10 bg-c4c3c166 rounded-3xl mr-20 mt-2 order-3 md:order-3">
             <Five forecast={data.forecast} />
@@ -41,7 +47,7 @@ const App: React.FC<AppProps> = () => {
           <One />
         </div>
         <div className="flex flex-5 flex-col mr-6 ml-6">
-          <div className="flex-1 mb-6">
+          <div className="flex-1 mb-4">
             <Two />
           </div>
           <div className="md:flex-1 rounded-3xl flex flex-col mt-15 mb-6">
