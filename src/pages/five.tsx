@@ -76,7 +76,7 @@ const Five: React.FC<FiveProps> = ({ forecast }) => {
         {forecastData.map((entry, index) => (
           <g
             key={index}
-            transform={`translate(${index * (isMobile ? 50 : 70)}, 0)`}
+            transform={`translate(${index * (isMobile ? 50 : 70) + 10}, 0)`}
           >
             <text
               y={Number(entry.temperature) - 1}
@@ -98,6 +98,7 @@ const Five: React.FC<FiveProps> = ({ forecast }) => {
               textAnchor="middle"
               fill="#F0F0F0"
               fontSize={10}
+              transform={`translate(${index * (isMobile ? 1 : 1) + 10}, 0)`}
               className="entry-text"
             >
               {entry.time}
@@ -107,6 +108,7 @@ const Five: React.FC<FiveProps> = ({ forecast }) => {
               textAnchor="middle"
               fill="#F0F0F0"
               fontSize={10}
+              transform={`translate(${index * (isMobile ? 1 : 1) + 10}, 0)`}
               className="entry-text"
             >
               {entry.windSpeed}

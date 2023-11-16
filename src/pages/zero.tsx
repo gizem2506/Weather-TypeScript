@@ -66,11 +66,11 @@ const Zero: React.FC<ZeroProps> = ({ date, city, type, degree }) => {
         <Image
           src="/assets/svg/cloudy.svg"
           alt="Weather Icon"
-          width={120}
-          height={120}
-          className="md:ml-20  mb-12"
+          width={150}
+          height={150}
+          className="md:ml-20  mb-12 shake-animation"
         />
-        <p className="text-white font-inter text-xl md:text-3xl font-medium ml-10">
+        <p className="text-white font-inter text-xl md:text-3xl font-medium md:ml-32 ml-10">
           {date}
         </p>
       </div>

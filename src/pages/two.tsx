@@ -11,14 +11,23 @@ const Two: React.FC = () => {
 
   const renderActivityImages = () => {
     return activityImages.map((image, index) => (
-      <Image
-        key={index}
-        width={160}
-        height={126}
-        className="  mt-2 mb-2"
-        alt={` ${index + 1}`}
-        src={image}
-      />
+      <div key={index} className="relative mt-2 mb-2 ">
+        <Image
+          width={160}
+          height={126}
+          alt={`${index + 1}`}
+          src={image}
+          className="rounded-xl"
+        />
+        <div
+          className="absolute top-0 left-0 w-full h-full mix-blend-multiply rounded-xl"
+          style={{
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "#D9D9D9",
+          }}
+        ></div>
+      </div>
     ));
   };
 

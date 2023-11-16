@@ -65,13 +65,15 @@ const There: React.FC<ThereProps> = ({ weeklyWeather }) => {
           >
             <div className="flex md:flex-col space-x-8 md:space-y-10 space-y-4  md:space-x-0 flex-row items-center">
               <p className="text-white text-xs">{day.toUpperCase()}</p>
-              <Image
-                className="h-16 w-10 "
-                alt="There"
-                src={imageUrl(currentData[day].type)}
-                width={40}
-                height={64}
-              />
+              <div className="up-down-container">
+                <Image
+                  className="h-16 w-10 moving-image"
+                  alt="There"
+                  src={imageUrl(currentData[day].type)}
+                  width={40}
+                  height={64}
+                />
+              </div>
               <p className="text-white text-lg">{`${currentData[day].degree}°`}</p>
             </div>
           </div>
@@ -87,6 +89,21 @@ const There: React.FC<ThereProps> = ({ weeklyWeather }) => {
           />
         </div>
       </div>
+      <style jsx>{`
+        .up-down-container {
+          animation: moveUpDown 3s linear infinite;
+        }
+
+        @keyframes moveUpDown {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+      `}</style>
     </div>
   );
 };
