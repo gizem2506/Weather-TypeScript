@@ -63,9 +63,9 @@ const Five: React.FC<FiveProps> = ({ forecast }) => {
     }
   };
 
-  const chartWidth = isMobile ? 310 : 440;
+  const chartWidth = isMobile ? 300 : 440;
   return (
-    <div className="bg-opacity-40 bg-[#C4C3C166] flex flex-col md:flex-row md:justify-center md:items-center p-10 rounded-3xl md:-mr-14">
+    <div className="md:ml-0 ml-40 bg-opacity-40 bg-[#C4C3C166] flex flex-col md:flex-row md:justify-center md:items-center p-10 rounded-3xl md:-mr-14 ">
       <LineChart width={chartWidth} height={100} data={forecastData}>
         <Line
           type="monotone"
