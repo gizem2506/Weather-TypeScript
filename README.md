@@ -1,6 +1,12 @@
+## İmportant Note
+
+- Sound has been added to the background of the project. It will start when you touch any point on the page. I wanted to give information so that the sound does not disturb you.
+- I made two, I tried to use different technologies in both. I sent both projects.
+
 ## Weather App
 
-- This weather website is developed using React.js version 18.2.0. The project is written in TypeScript, and Tailwind CSS is used for the user interface design. Weather data is fetched from a data source in JSON format.
+- This weather website is developed with next using the latest version of React.js. The project is written in TypeScript, and Tailwind CSS is used for the user interface design. Weather data is fetched from a data source in JSON format.
+- I published the projects in Vercel, I am sharing the links, you can view them from there.
 
 ## Getting Started
 
